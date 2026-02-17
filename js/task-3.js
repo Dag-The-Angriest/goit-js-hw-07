@@ -4,7 +4,7 @@ btnElem.addEventListener("input", () => {
   //   inputElem.append(e);
   const value = btnElem.value;
   console.log(value);
-  if (value === "") {
+  if (value.trim() === "") {
     inputElem.textContent = "Anonymous";
   } else inputElem.textContent = value.trim();
 });

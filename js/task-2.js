@@ -25,15 +25,17 @@ const images = [
   },
 ];
 
-const gallElem = document.querySelector("ul");
+const gallElem = document.querySelector(".gallery");
 console.log(gallElem);
 
 const arr = [];
 // const image = document.createElement("img");
 for (const image of images) {
+  const liElem = document.createElement("li");
   const imgElem = document.createElement("img");
-  imgElem.setAttribute("url", image.url);
-  imgElem.setAttribute("alt", image.alt);
-  arr.push(imgElem);
+  liElem.appendChild(imgElem);
+  imgElem.src = image.url;
+  imgElem.alt = image.alt;
+  arr.push(liElem);
 }
 gallElem.append(...arr);
