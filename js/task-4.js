@@ -6,7 +6,7 @@ form.addEventListener("submit", (e) => {
     form.elements.email.value.trim() === "" ||
     form.elements.password.value.trim() === ""
   ) {
-    alert("All form fields must be filled in");
+    return alert("All form fields must be filled in");
   }
   const obj = {};
 
